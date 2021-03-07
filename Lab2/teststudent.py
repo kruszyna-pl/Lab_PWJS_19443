@@ -4,7 +4,8 @@ import Lab2.Student as stud
 def testy():
     print('Zadanie 1,Zadanie 3 ,Zadanie 4')
     s1 = stud.Student('Wojciech', 'Pietruszyński', 19443, 'Informatyka')
-    # print(student.numer_indeksu) jeśli pole prywatne to nie da rady go wydrukowac brak dostępu
+    # print(student.numer_indeksu) jeśli pole prywatne to wywołanie jest nie możliwe
+    # przy obiekcie możemy się odwołać
     print(s1.getLicznik(), s1)
     s2 = stud.StudentInformatyki('Jan', 'Kowalski', 12345, None, 'Programowanie')
     print(s2.getLicznik(), s2.__str__(), 'Specjalnosc: ', s2.specjalnosc)
@@ -24,8 +25,10 @@ def testy():
     print(s1.__eq__(s1))
 
     print("Zadanie 5")
-    stud.Student.rokDrugi(s1,3)
+    stud.Student.rokDrugi(s1)
 
+    print("Zadanie 5 poprawiona metoda")
+    stud.Student.rok_studiow(s2, 4)
 
 
 if __name__ == "__main__":

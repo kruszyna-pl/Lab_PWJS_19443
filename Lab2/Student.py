@@ -33,8 +33,8 @@ class Student:
     ## Usprawniona fukcja rok_drugi według mnie powinna przyjmować dodatkowy parametr
     # w tym wypoadku rok studiów
     # poprawiona funcja prezentuje się następująco
-    # def rok_studiow(self, rokStudiow):
-    #     print(self.__str__() + ' Rok:', rokStudiow)
+    def rok_studiow(self, rokStudiow):
+        print(self.__str__() + ' Rok:', rokStudiow)
     # funkcja rok drugi nie jest zła jednak, takie harcodowanie nie jest dobra praktyka
     # starajmy sie aby nasze rozwiązania były reużywalne oraz miały sens
 
