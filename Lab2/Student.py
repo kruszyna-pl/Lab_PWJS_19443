@@ -1,8 +1,8 @@
-class Studencik:
+class Student:
     licznik = 0
 
     def __init__(self, imie, nazwisko, __numer_indeksu, kierunek):
-        Studencik.licznik += 1
+        Student.licznik += 1
         self.imie = imie
         self.nazwisko = nazwisko
         self.numer_indeksu = __numer_indeksu
@@ -13,10 +13,10 @@ class Studencik:
                f'Kierunek : {self.kierunek} '
 
     def getLicznik(self):
-        return Studencik.licznik
+        return Student.licznik
 
 
-class StudentInformatyki(Studencik):
+class StudentInformatyki(Student):
 
     def __init__(self, imie, nazwisko, __numer_indeksu, kierunek, specjalnosc):
         super().__init__(imie, nazwisko, __numer_indeksu, kierunek)

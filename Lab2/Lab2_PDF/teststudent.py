@@ -1,8 +1,8 @@
-import Lab2.studencik as stud
+import Lab2.Student as stud
 
 
 def testy():
-    student = stud.Studencik('Wojciech', 'Pietruszyński', 19443, 'Informatyka')
+    student = stud.Student('Wojciech', 'Pietruszyński', 19443, 'Informatyka')
     print(student.getLicznik(), student)
     student1 = stud.StudentInformatyki('Jan', 'Kowalski', 12345, None, 'Programowanie')
     print(student1.getLicznik(), student1)
