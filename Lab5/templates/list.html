@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista pracowników</title>
+</head>
+<body>
+<a class="py-2 d-none d-md-inline-block" href="/">Strona główna</a>
+<a class="py-2 d-none d-md-inline-block" href="/add">Dodaj</a>
+<a class="py-2 d-none d-md-inline-block" href="/list">Lista</a>
+
+<table border="1">
+    {% for row in row %}
+    <tbody>
+    <tr>
+        <td>{{row.emp_number}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.surname}}</td>
+        <td>{{row.address}}</td>
+    </tr>
+    </tbody>
+    {% endfor %}
+
+</body>
+</html>

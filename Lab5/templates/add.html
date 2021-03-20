@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj</title>
+</head>
+<body>
+<a class="py-2 d-none d-md-inline-block" href="/">Strona główna</a>
+<a class="py-2 d-none d-md-inline-block" href="/add">Dodaj</a>
+<a class="py-2 d-none d-md-inline-block" href="/list">Lista</a>
+
+
+<h1>Dodaj pracownika</h1>
+<form action="{{ url_for('addrow') }}" method="POST">
+
+    Imię i nazwisko<br>
+    <input type="text" name="imienazwisko"/></br>
+
+    Adres<br>
+    <textarea name="adres"></textarea><br>
+
+    Miasto<br>
+    <input type="text" name="miasto"/><br>
+
+    Numer indeksu<br>
+    <input type="text" name="indeks"/><br>
+
+    <input type="submit" value="Zapisz"/><br>
+</form>
+
+
+</body>
+</html>
