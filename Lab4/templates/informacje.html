@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<body>
+
+{% extends "baza.html" %}
+{% block content %}
+{% for blog in blog %}
+<p>{{blog.autor.username}} send : <b>{{blog.body}}</b></p>
+{% endfor %}
+{% endblock %}
+
+</body>
+</html>
