@@ -9,6 +9,11 @@ def main():
     return render_template('index.html')
 
 
+@app.route("/add")
+def new_student():
+    return render_template('add.html')
+
+
 @app.route("/list")
 def list():
     connector = sql.connect("employees.db")
@@ -19,8 +24,8 @@ def list():
     return render_template('list.html', row=row)
 
 
-@app.route('/addemp', methods=['POST','GET'])
-def method_add_emp():
+@app.route('/addrec', methods=['POST', 'GET'])
+def addrec():
     if request.method == 'POST':
         try:
             emp_number = request.form['emp_number']
@@ -44,10 +49,5 @@ def method_add_emp():
             return render_template('result.html', msg=msg)
 
 
-@app.route("/add")
-def new_student():
-    return render_template('add.html')
-
-
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
